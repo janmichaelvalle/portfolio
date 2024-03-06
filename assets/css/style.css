@@ -305,7 +305,7 @@ h6 {
 }
 
 #hero p {
-  color: #45505b;
+  color: #0563bb;
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
@@ -316,11 +316,7 @@ h6 {
   letter-spacing: 1px;
 } */
 
-#hero-description {
-  color: #0563bb;
-  letter-spacing: 1px;
-}
-
+å
 #hero button {
   background: #0563bb;
   border: 0;
@@ -819,6 +815,32 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+.portfolio-description {
+  height: 100px; /* Set the desired height */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.services .btn {
+ 
+    background: #0563bb;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    margin-top: 15px;  
+}
+
+.services .btn:hover {
+  background: #47aeff;
+}
+
+.services .btn:disabled {
+  background:#CCCCCC;
+}
+
+
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
@@ -881,73 +903,73 @@ section {
   color: #47aeff;
 }
 
-.services .iconbox-blue:hover .icon i {
+/* .services .iconbox-blue:hover .icon i {
   color: #fff;
 }
 
 .services .iconbox-blue:hover .icon path {
   fill: #47aeff;
-}
+} */
 
 .services .iconbox-orange i {
   color: #ffa76e;
 }
 
-.services .iconbox-orange:hover .icon i {
+/* .services .iconbox-orange:hover .icon i {
   color: #fff;
 }
 
 .services .iconbox-orange:hover .icon path {
   fill: #ffa76e;
-}
+} */
 
 .services .iconbox-pink i {
   color: #e80368;
 }
 
-.services .iconbox-pink:hover .icon i {
+/* .services .iconbox-pink:hover .icon i {
   color: #fff;
 }
 
 .services .iconbox-pink:hover .icon path {
   fill: #e80368;
-}
+} */
 
 .services .iconbox-yellow i {
   color: #ffbb2c;
 }
 
-.services .iconbox-yellow:hover .icon i {
+/* .services .iconbox-yellow:hover .icon i {
   color: #fff;
 }
 
 .services .iconbox-yellow:hover .icon path {
   fill: #ffbb2c;
-}
+} */
 
 .services .iconbox-red i {
   color: #ff5828;
 }
 
-.services .iconbox-red:hover .icon i {
+/* .services .iconbox-red:hover .icon i {
   color: #fff;
 }
 
 .services .iconbox-red:hover .icon path {
   fill: #ff5828;
-}
+} */
 
 .services .iconbox-teal i {
   color: #11dbcf;
 }
 
-.services .iconbox-teal:hover .icon i {
+/* .services .iconbox-teal:hover .icon i {
   color: #fff;
 }
 
 .services .iconbox-teal:hover .icon path {
   fill: #11dbcf;
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1081,12 +1103,12 @@ section {
   color: #fff;
 }
 
-.contact .php-email-form {
+.contact .php-email {
   width: 100%;
   background: #fff;
 }
 
-.contact .php-email-form .form-group {
+.contact .php-email .form-group {
   padding-bottom: 8px;
 }
 
@@ -1143,20 +1165,21 @@ section {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .email-form button[type=submit] {
   background: #0563bb;
   border: 0;
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
+  margin-top: 15px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .email-form button[type=submit]:hover {
   background: #0678e3;
 }
 
