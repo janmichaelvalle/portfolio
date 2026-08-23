@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items Successfully Created</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      📘 Once your quotation is submitted, we’ll run validations and display the results. You’ll then need to select the supplier information to apply to all items.
+      <br>
+      To continue, please click <strong>View</strong> button for <em>Compact Foldable Laundry Basket</em>.
+      <br>
+      <small class="text-muted">Note: Apply to All button is not active</small>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <h2 class="mb-3">Quotation ID: UPL-20250424-103812 </h2>
+   
+    <p class="text-muted small">
+      Uploaded by:  <span>jan.valle@sellerx.com</span>
+    </p>
+    <p class="text-muted small">
+      Date Created: <span>April 24, 2025</span>
+    </p>
+
+    
+      
+    <div class="card p-3 mt-4">
+      <div class="row align-items-end">
+        <div class="col-12">
+          <p>Please select the supplier details below and apply them to all items.</p>
+        </div>
+    
+        <div class="col-md-6">
+          <label for="supplierSelect" class="form-label">Supplier</label>
+          <select class="form-select" id="supplierSelect" name="supplier" required>
+            <option value="Hanoi Soft Goods Co." selected>Hanoi Soft Goods Co.</option>
+            <option value="Global Textile Imports">Global Textile Imports</option>
+            <option value="ZenSource Manufacturing">ZenSource Manufacturing</option>
+            <option value="KW Partners Inc.">KW Partners Inc.</option>
+            <option value="Alpha Home Goods">Alpha Home Goods</option>
+          </select>
+        </div>
+    
+        <div class="col-md-3">
+          <label for="leadTime" class="form-label">Lead Time (days)</label>
+          <input type="text" class="form-control" id="leadTime" name="lead_time" placeholder="e.g., 30" value="70">
+        </div>
+    
+        <div class="col-md-3">
+          <label for="manufacturerCountry" class="form-label">Manufacturer Country</label>
+          <select class="form-select" id="manufacturerCountry" name="manufacturer_country">
+            <option value="Vietnam" selected>Vietnam</option>
+            <option value="China">China</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <option value="Philippines">Philippines</option>
+          </select>
+        </div>
+    
+        <div class="col-md-12 d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary mt-4">Apply to All</button>
+        </div>
+      </div>
+    </div>
+    
+  
+    <br>
+  
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">Display Name</th>
+          <th scope="col">Qutoation File Validation</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="item/compact-foldable-laundy-basket/draft.html">Compact Foldable Laundry Basket</a></td>
+          <td class="text-success">All fields complete</td>
+          <td>
+            <a href="item/compact-foldable-laundy-basket/draft.html" class="btn btn-sm btn-outline-primary me-1">
+              <i class="bi bi-eye"></i> View
+            </a>
+            <button class="btn btn-sm btn-outline-danger">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </td>
+          
+        </tr>
+        <tr>
+          <td><a href="#">Over-the-Door Hanging Organizer</a></td>
+          <td class="text-danger">Missing fields – please check</td>
+          <td>
+            <a href="#" class="btn btn-sm btn-outline-primary me-1">
+              <i class="bi bi-eye"></i> View
+            </a>
+            <button class="btn btn-sm btn-outline-danger">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">Collapsible Storage Bins – Set of 3</a></td>
+          <td class="text-success">All fields complete</td>
+          <td>
+              <a href="#" class="btn btn-sm btn-outline-primary me-1">
+                <i class="bi bi-eye"></i> View
+              </a>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">Mesh Laundry Hamper with Handle</a></td>
+          <td class="text-danger">Missing fields – please check</td>
+          <td>
+            <a href="#" class="btn btn-sm btn-outline-primary me-1">
+              <i class="bi bi-eye"></i> View
+            </a>
+            <button class="btn btn-sm btn-outline-danger">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="mt-4">
+      <a href="index.html" class="btn btn-outline-secondary">← Back to Item List</a>
+      <a href="qutation-files.html" class="btn btn-outline-secondary">← Back to Quotation Files List</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
