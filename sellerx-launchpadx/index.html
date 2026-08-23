@@ -8,6 +8,57 @@
 </head>
 <body>
   <div class="container mt-5">
+    <div class="card border-0 bg-light mb-4">
+  <div class="card-body p-4 p-md-5">
+    <span class="badge text-bg-primary mb-3">Interactive prototype</span>
+
+    <h1 class="h2">LaunchPadX</h1>
+
+    <p class="lead">
+      A web-based item creation workflow designed to replace spreadsheet-based
+      processes with structured approvals, SKU creation, and NetSuite
+      integration.
+    </p>
+
+    <div class="row g-3 mt-2">
+      <div class="col-md-4">
+        <strong>Problem</strong>
+        <p class="text-muted mb-0">
+          Item creation relied on spreadsheets, manual handoffs, and fragmented
+          approvals.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <strong>My role</strong>
+        <p class="text-muted mb-0">
+          Product discovery, workflow mapping, requirements definition, and
+          cross-functional delivery.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <strong>Solution</strong>
+        <p class="text-muted mb-0">
+          A centralized workflow for uploads, review, approval, SKU creation,
+          and system synchronization.
+        </p>
+      </div>
+    </div>
+
+    <div class="border-start border-primary border-4 bg-white p-3 mt-4">
+  <strong>Prototype approach</strong>
+
+  <p class="text-muted mb-0 mt-1">
+    I built this interactive prototype with HTML and Bootstrap to visualize the
+    proposed workflow, align stakeholders, and gather feedback before
+    engineering implementation.
+  </p>
+</div>
+
+  
+  </div>
+</div>
     <div class="alert alert-info alert-dismissible fade show" role="alert">
       📘 <strong>This is a mockup experience.</strong> Some features are not functional, so please follow the pop-up instructions to proceed through the flow.
       <br>
@@ -17,74 +68,90 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     
-    <h2 class="mb-4">All Items</h2>
-    <div class="text-end mb-3">
-        <a href="upload-success.html" class="btn btn-primary">Upload quotation file</a>
-        <a href="qutation-files.html" class="btn btn-outline-secondary me-2">View all quotation files</a>
-    </div>
-    
-    <table class="table table-hover align-middle">
-      <thead class="table-light">
-        <tr>
-          <!-- <th scope="col"><input type="checkbox"></th> -->
-          <th scope="col">Status</th>
-          <th scope="col">Brand</th>
-          <th scope="col">Display Name</th>
-          <th scope="col">SKU</th>
-          <th scope="col">UPC</th>
-          <th scope="col">Date Created</th>
-          <th scope="col">Date Sync to NetSuite</th>
-          <th scope="col">Uploaded by</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <!-- <td><input type="checkbox"></td> -->
-          <td>Draft</td>
-          <td>Navaris</td>
-          <td><a href="#">Bamboo Wireless Charging Stand</a></td>
-          <td>-</td>
-          <td>–</td>
-          <td>2024-10-09 24:57</td>
-          <td>–</td>
-          <td>john.doe</td>
-        </tr>
-        <tr>
-          <!-- <td><input type="checkbox"></td> -->
-          <td>Approved</td>
-          <td>KW Mobile</td>
-          <td><a href="#">Ultra-Slim Silicone Phone Case</a></td>
-          <td>KWM0001742B001S</td>
-          <td>843218765432</td>
-          <td>2025-01-27 10:15:30</td>
-          <td>–</td>
-          <td>jane.smith</td>
-        </tr>
-        <tr>
-          <!-- <td><input type="checkbox"></td> -->
-          <td>Synced to NetSuite</td>
-          <td>Brightday</td>
-          <td><a href="#">LED Sunrise Alarm Clock</a></td>
-          <td>BRG0004821C000S</td>
-          <td>843218765432A</td>
-          <td>2025-01-25 09:30:15</td>
-          <td>2025-01-25 09:35:50</td>
-          <td>lucky.williams</td>
-        </tr>
-        <tr>
-          <!-- <td><input type="checkbox"></td> -->
-          <td>Synced to NetSuite</td>
-          <td>Zenith</td>
-          <td><a href="#">Ergonomic Mesh Office Chair</a></td>
-          <td>ZEN0002549E000A</td>
-          <td>690871234509</td>
-          <td>2025-01-24 16:20:10</td>
-          <td>2025-01-24 16:21:30</td>
-          <td>mark.jones</td>
-        </tr>
-      </tbody>
-    </table>
+   <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+  <h2 class="mb-0">All Items</h2>
+
+  <div class="d-grid d-md-flex gap-2">
+    <a href="upload-success.html" class="btn btn-primary">
+      Upload quotation file
+    </a>
+
+    <a href="qutation-files.html" class="btn btn-outline-secondary">
+      View all quotation files
+    </a>
   </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover align-middle text-nowrap">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Status</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Display Name</th>
+        <th scope="col">SKU</th>
+        <th scope="col">UPC</th>
+        <th scope="col">Date Created</th>
+        <th scope="col">Date Sync to NetSuite</th>
+        <th scope="col">Uploaded by</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Draft</td>
+        <td>Navaris</td>
+        <td>
+          <a href="#">Bamboo Wireless Charging Stand</a>
+        </td>
+        <td>–</td>
+        <td>–</td>
+        <td>2024-10-09 14:57</td>
+        <td>–</td>
+        <td>john.doe</td>
+      </tr>
+
+      <tr>
+        <td>Approved</td>
+        <td>KW Mobile</td>
+        <td>
+          <a href="#">Ultra-Slim Silicone Phone Case</a>
+        </td>
+        <td>KWM0001742B001S</td>
+        <td>843218765432</td>
+        <td>2025-01-27 10:15:30</td>
+        <td>–</td>
+        <td>jane.smith</td>
+      </tr>
+
+      <tr>
+        <td>Synced to NetSuite</td>
+        <td>Brightday</td>
+        <td>
+          <a href="#">LED Sunrise Alarm Clock</a>
+        </td>
+        <td>BRG0004821C000S</td>
+        <td>843218765432A</td>
+        <td>2025-01-25 09:30:15</td>
+        <td>2025-01-25 09:35:50</td>
+        <td>lucky.williams</td>
+      </tr>
+
+      <tr>
+        <td>Synced to NetSuite</td>
+        <td>Zenith</td>
+        <td>
+          <a href="#">Ergonomic Mesh Office Chair</a>
+        </td>
+        <td>ZEN0002549E000A</td>
+        <td>690871234509</td>
+        <td>2025-01-24 16:20:10</td>
+        <td>2025-01-24 16:21:30</td>
+        <td>mark.jones</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
   <footer class="text-center text-muted small mb-4">
     This mockup is made by Jan Valle.
   </footer>
