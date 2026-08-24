@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compact Foldable Laundry Basket</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+<body>
+  
+  
+  <div class="container mt-5">
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      📘 You are now viewing this as an admin. Admins will be able to review, generate skus/upcs, and sync to Netsuite.
+  <br>
+  To move to the next step, click the <strong>Approved</strong> button below.
+  <br>
+  <small class="text-muted">Note: This is a mockup using dummy data. Save functionality is not active.</small>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+   
+
+  
+    <h3>Compact Foldable Laundry Basket</h3>
+    <p class="text-muted small">
+      Uploaded by:  <span>jan.valle@sellerx.com</span>
+    </p>
+    <p class="text-muted small">
+      Date Created: <span>April 24, 2025</span>
+    </p>
+    <p class="text-muted small">
+        Quotation ID: <a href="../../upload-success.html"><span>UPL-20250424-103812</span></a>
+    </p>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <span id="statusBadge" class="badge bg-warning fs-6 px-3 py-2">Status: For Approval</span>
+      <div class="border rounded px-3 py-1 text-muted small">
+        Role: Admin
+      </div>
+    </div>
+  
+    <!-- Tab Headers -->
+<ul class="nav nav-tabs mb-3" id="quotationTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="items-tab" data-bs-toggle="tab" data-bs-target="#items" type="button" role="tab">Item Information</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="fileinfo-tab" data-bs-toggle="tab" data-bs-target="#fileinfo" type="button" role="tab">SKU & UPC Generation</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="synctonetsuite-tab" data-bs-toggle="tab" data-bs-target="#synctonetsuite" type="button" role="tab">Sync to Netsuite</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="otheractions-tab" data-bs-toggle="tab" data-bs-target="#otheractions" type="button" role="tab">Other Actions</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history" type="button" role="tab">History</button>
+  </li>
+</ul>
+
+
+
+<!-- Tab Content -->
+<div class="tab-content" id="quotationTabsContent">
+  <div class="tab-pane fade" id="history" role="tabpanel">
+    <div class="mt-4">
+      <h5 class="fw-semibold mb-3">History</h5>
+      <p class="text-muted">View the complete history of item creation</p>
+  
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h6 class="mb-1 fw-bold">Review Submitted</h6>
+              <small class="text-muted d-block">2025-04-24 10:30:00</small>
+              <small class="text-muted d-block">Action performed by: jan.valle@sellerx.com</small>
+              <p class="mb-1 mt-2">Product was submitted for review and is now in <strong>In Review</strong> status.</p>
+            </div>
+            
+            <span class="badge bg-success align-self-start">Success</span>
+          </div>
+        </li>
+  
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h6 class="mb-1 fw-bold">Item Created</h6>
+              <small class="text-muted d-block">2025-04-24 09:30:00</small>
+              <small class="text-muted d-block">Action performed by: jan.valle@sellerx.com</small>
+              <p class="mb-1 mt-2">Product created successfully and is in <strong>Draft</strong> status</p>
+            </div>
+            
+            <span class="badge bg-success align-self-start">Success</span>
+          </div>
+        </li>
+      
+  
+   
+  
+      </ul>
+    </div>
+  
+  </div>
+
+    <!-- ITEMS TAB -->
+  <div class="tab-pane fade show active" id="items" role="tabpanel">
+      <!-- Insert from item-information.html -->
+          <div id="formContainer"></div>
+      <script>
+        fetch('item-information.html')
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById('formContainer').innerHTML = html;
+          });
+      </script>
+  
+
+      <!-- Buttons -->
+      <div class="mt-4 d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-2">
+          <a href="../../upload-success.html" class="btn btn-outline-secondary">← View Quotation Upload</a>
+          <a href="../../index.html" class="btn btn-outline-secondary">← View All Items</a>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-outline-primary">Save</button>
+          <a href="sku-upc-by-admin.html" class="btn btn-primary">Approved</a>
+        </div>
+      </div>
+      <!-- Spacer -->
+<div class="mb-5"></div>
+</form>
+  </div>
+  <div class="tab-pane fade" id="fileinfo" role="tabpanel">
+    <div class="container py-4">
+        <!-- Product Preview -->
+        <div class="border rounded p-4">
+          <h5 class="fw-semibold mb-3">Product Preview</h5>
+          <div class="text-muted mb-4">Review your product details</div>
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <div class="text-muted small">Display Name</div>
+              <div class="fw-semibold">Compact Foldable Laundry Basket</div>
+            </div>
+            <div class="col-md-3">
+              <div class="text-muted small">Brand</div>
+              <div class="fw-semibold">Home Goods</div>
+            </div>
+            <div class="col-md-3">
+              <div class="text-muted small">Item Type</div>
+              <div class="fw-semibold">Single</div>
+            </div>
+            <div class="col-md-3">
+              <div class="text-muted small">Parent</div>
+              <div class="fw-semibold">None</div>
+            </div>
+          </div>
+        </div>
+      
+      <br>
+      
+      <!-- SKU & UPC Generation -->
+      <div class="border rounded mb-4">
+        <div class="bg-light border-bottom px-4 py-3">
+          <h5 class="mb-0 fw-semibold">SKU & UPC Generation</h5>
+          <div class="text-muted small">Generate SKU and UPC for your product</div>
+        </div>
+        <div class="row p-4">
+          <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold d-flex justify-content-between">
+              <span>SellerX SKU</span>
+              <button type="button" class="btn btn-primary btn-sm" id="generateSkuBtn">Generate SKU</button>
+            </label>
+            <input class="form-control" id="skuField" value="" readonly>
+            <div class="text-muted small mt-1">The SKU will be automatically generated based on your product details.</div>
+          </div>
+        
+          <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold d-flex justify-content-between">
+              <span>UPC</span>
+              <button type="button" class="btn btn-primary btn-sm" id="generateUpcBtn">Generate UPC</button>
+            </label>
+            <input class="form-control" id="upcField" value="" readonly>
+            <div class="text-muted small mt-1">The UPC will be assigned based on the selected brand.</div>
+          </div>
+        </div>
+        
+        <div id="alertPlaceholder" class="container"></div>
+        
+        <script>
+          // Function to check if both SKU and UPC exist
+          function checkIfBothGenerated() {
+            const sku = document.getElementById("skuField").value.trim();
+            const upc = document.getElementById("upcField").value.trim();
+          
+            if (sku && upc) {
+              showCustomNote();
+            }
+          }
+          
+          // Replace default alert with your custom note
+          function showCustomNote() {
+            const alertPlaceholder = document.getElementById('alertPlaceholder');
+            alertPlaceholder.innerHTML = `
+              <div class="alert alert-warning py-2 px-3 mb-3" style="font-size: 0.875rem;">
+                Note: Once SKU and UPC is generated, we can move to Syncing to Netsuite. 
+                Click <a href="sync-to-nt-by-admin.html" class="alert-link">here</a> to move to the next step. 
+                This message will not appear in the final user-facing version.
+              </div>
+            `;
+          }
+          
+          document.getElementById("generateSkuBtn").addEventListener("click", function () {
+            document.getElementById("skuField").value = "HMG0000420X001S";
+            this.disabled = true;
+            checkIfBothGenerated();
+          });
+          
+          document.getElementById("generateUpcBtn").addEventListener("click", function () {
+            document.getElementById("upcField").value = "857493028475";
+            this.disabled = true;
+            checkIfBothGenerated();
+          });
+          </script>
+          
+      </div>
+  
+    
+  
+    </div>
+  </div>
+  <div class="tab-pane fade" id="synctonetsuite" role="tabpanel">
+    <!-- Your Syn to NT Content here -->
+    <form>
+      <!-- Basic Info -->
+      <div class="container my-5">
+        <h4 class="mb-4 fw-semibold">Product Summary</h4>
+        <p class="text-muted mb-4">Complete product details</p>
+    
+        <!-- General Info -->
+        <div class="row mb-4">
+          <div class="col-md-4"><strong>SellerX SKU</strong><br>-</div>
+          <div class="col-md-4"><strong>UPC Code</strong><br></div>
+        </div>
+    
+        <div class="row mb-4">
+          <div class="col-md-4"><strong>Display Name</strong><br>Compact Foldable Laundry Basket</div>
+          <div class="col-md-4"><strong>Brand</strong><br>Home Goods </div>
+          <div class="col-md-4"><strong>Category</strong><br>Phone Accessories</div>
+        </div>
+    
+        <div class="row mb-4">
+          <div class="col-md-4"><strong>Item Type</strong><br>Single</div>
+          <div class="col-md-4"><strong>NetSuite Item Type</strong><br>Inventory Item</div>
+          <div class="col-md-4"><strong>Parent SKU</strong><br>None</div>
+        </div>
+    
+        <!-- Description -->
+        <div class="mb-4">
+          <strong>Purchase Description</strong><br>
+          <p class="mb-0 text-muted">Foldable basket made of polyester and steel, ideal for compact laundry storage.</p>
+        </div>
+    
+        <!-- Supplier Info -->
+        <div class="row mb-4">
+          <div class="col-md-4"><strong>Item Subsidiary</strong><br>1 | 4</div>
+          <div class="col-md-4"><strong>Item Supplier</strong><br>Hanoi Soft Goods Co.</div>
+          <div class="col-md-4"><strong>Manufacturer Country</strong><br>Vietnam</div>
+        </div>
+    
+        <div class="row mb-4">
+          <div class="col-md-4"><strong>Currency</strong><br>VND</div>
+          <div class="col-md-4"><strong>Price</strong><br>8.50</div>
+          <div class="col-md-4"><strong>Responsible Purchaser</strong><br>Michael Tan</div>
+        </div>
+    
+        <div class="row mb-4">
+          <div class="col-md-4"><strong>Preferred Supplier</strong><br>Yes</div>
+          <div class="col-md-4"><strong>Track Landed Cost</strong><br>Yes</div>
+          <div class="col-md-4"><strong>LFS Item</strong><br>Yes</div>
+        </div>
+    
+        <!-- Replenishment -->
+        <div class="mb-4">
+          <strong>Replenishment Settings</strong><br>
+          <ul class="mb-0 text-muted">
+            <li>NO FBA REPLENISHMENT – US</li>
+            <li>NO FBA REPLENISHMENT – UK</li>
+          </ul>
+        </div>
+    
+        <!-- Dimensions -->
+        <h5 class="mt-5 fw-semibold">Dimensions - Metric</h5>
+        <div class="row mb-3">
+          <div class="col-md-3">WIDTH_NS, CM: 7.5</div>
+          <div class="col-md-3">HEIGHT_NS, CM: 15</div>
+          <div class="col-md-3">LENGTH_NS, CM: 0.8</div>
+          <div class="col-md-3">WEIGHT_NS, KG: 0.05</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">WIDTH_PS, CM: 8.0</div>
+          <div class="col-md-3">HEIGHT_PS, CM: 15.2</div>
+          <div class="col-md-3">LENGTH_PS, CM: 1.0</div>
+          <div class="col-md-3">WEIGHT_PS, KG: 0.06</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">WIDTH_CTN, CM: 30.0</div>
+          <div class="col-md-3">HEIGHT_CTN, CM: 20.0</div>
+          <div class="col-md-3">LENGTH_CTN, CM: 40.0</div>
+          <div class="col-md-3">WEIGHT_CTN, KG: 2.5</div>
+        </div>
+    
+        <h5 class="mt-4 fw-semibold">Dimensions - Imperial</h5>
+        <div class="row mb-3">
+          <div class="col-md-3">WIDTH_NS, INCH: 2.95</div>
+          <div class="col-md-3">HEIGHT_NS, INCH: 5.90</div>
+          <div class="col-md-3">LENGTH_NS, INCH: 0.30</div>
+          <div class="col-md-3">WEIGHT_NS, INCH: 0.11</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">WIDTH_PS, INCH: 3.14</div>
+          <div class="col-md-3">HEIGHT_PS, INCH: 5.98</div>
+          <div class="col-md-3">LENGTH_PS, INCH: 0.39</div>
+          <div class="col-md-3">WEIGHT_PS, INCH: 0.13</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">WIDTH_CTN, INCH: 11.81</div>
+          <div class="col-md-3">HEIGHT_CTN, INCH: 7.87</div>
+          <div class="col-md-3">LENGTH_CTN, INCH: 15.74</div>
+          <div class="col-md-3">WEIGHT_CTN, INCH: 5.51</div>
+        </div>
+  
+
+
+      <!-- Button -->
+<div class="mt-5 text-end">
+  <!-- <a href="#items" class="btn btn-outline-primary" id="editTabButton">Edit</a> -->
+</div>
+
+
+    </form>
+  </div>
+  
+  <div class="tab-pane fade" id="history" role="tabpanel">
+    <div class="mt-4">
+      <h5 class="fw-semibold mb-3">Stage History</h5>
+      <p class="text-muted">View the complete history of stage transitions, inputs, and outputs for this product.</p>
+    
+      <!-- Timeline Entry -->
+      <div class="border-start border-2 ps-4 ms-2">
+    
+        <!-- Entry 1 -->
+        <div class="mb-4 position-relative">
+          <span class="position-absolute top-0 start-0 translate-middle p-2 bg-success rounded-circle"></span>
+          <h6 class="fw-semibold">DATA ENTRY</h6>
+          <div class="text-muted small">2025-03-15 09:30:00</div>
+          <p class="mb-1">Product created successfully in <strong>DATA_ENTRY</strong> stage.</p>
+          <div><span class="badge bg-success">Success</span></div>
+        </div>
+    
+        <!-- Entry 2 -->
+        <div class="mb-4 position-relative">
+          <span class="position-absolute top-0 start-0 translate-middle p-2 bg-success rounded-circle"></span>
+          <h6 class="fw-semibold">SKU UPC GENERATION</h6>
+          <div class="text-muted small">2025-03-20 14:15:00</div>
+          <p class="mb-1">SKU <strong>SX-KM1001</strong> and UPC <strong>857493028475</strong> generated successfully.</p>
+          <div><span class="badge bg-success">Success</span></div>
+        </div>
+    
+        <!-- Entry 3 -->
+        <div class="mb-4 position-relative">
+          <span class="position-absolute top-0 start-0 translate-middle p-2 bg-success rounded-circle"></span>
+          <h6 class="fw-semibold">NETSUITE IMPORT</h6>
+          <div class="text-muted small">2025-04-02 16:15:00</div>
+          <p class="mb-1">Product successfully imported to NetSuite with ID <strong>NS-4857</strong>.</p>
+          <div><span class="badge bg-success">Success</span></div>
+        </div>
+    
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+      
+
+      
+  
+    
+  </div>
+
+      <!-- Spacer -->
+      <div class="mb-5"></div>
+
+
+<!-- Footer -->
+<footer class="text-center text-muted small mb-4">
+  This mockup is made by Jan Valle.
+</footer>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    const currencyMap = {
+      "Hanoi Soft Goods Co.": "VND",
+      "Global Textile Imports": "USD",
+      "ZenSource Manufacturing": "EUR",
+      "KW Partners Inc.": "USD",
+      "Alpha Home Goods": "GBP"
+    };
+  
+    document.getElementById("supplierSelect").addEventListener("change", function() {
+      const selected = this.value;
+      const currency = currencyMap[selected] || "";
+      document.getElementById("currencyField").value = currency;
+    });
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tab = document.querySelector('#synctonetsuite');
+    const formElements = tab.querySelectorAll('input, select, textarea');
+
+    formElements.forEach((element) => {
+      element.disabled = true;
+    });
+  });
+</script>
+<script>
+  document.getElementById("editTabButton").addEventListener("click", function () {
+    const tabTrigger = new bootstrap.Tab(document.querySelector('#items-tab'));
+    tabTrigger.show();
+    document.getElementById('items').scrollIntoView({ behavior: 'smooth' });
+  });z
+</script>
+
+
+
+<script src="../../scripts/main.js"></script>
+
+
+
+
+
+</body>
+</html>

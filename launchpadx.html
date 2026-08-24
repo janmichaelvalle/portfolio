@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LaunchpadX product case study by Jan Michael Valle.">
+
+  <title>LaunchpadX Case Study | Jan Michael Valle</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:600,700|Poppins:500,600,700" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .case-study-hero {
+      padding: 80px 0 48px;
+      background: #f8f9fa;
+    }
+
+    .case-study-label {
+      color: #0563bb;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .case-study-hero h1 {
+      margin: 12px 0 16px;
+      color: #45505b;
+      font-family: "Raleway", sans-serif;
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      font-weight: 700;
+    }
+
+    .case-study-hero .lead {
+      max-width: 760px;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 32px;
+      margin-top: 28px;
+      color: #45505b;
+    }
+
+    .project-meta strong {
+      display: block;
+      color: #0563bb;
+      font-size: .8rem;
+      text-transform: uppercase;
+    }
+
+    .case-study-content {
+      padding: 64px 0;
+    }
+
+    .phase-card {
+      height: 100%;
+      padding: 28px;
+      border: 1px solid #e6e9ec;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 8px 28px rgba(69, 80, 91, .08);
+    }
+
+    .phase-number {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eaf4ff;
+      color: #0563bb;
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    .phase-card h3 {
+      color: #45505b;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .phase-card .btn {
+      margin-top: 12px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      background: #0563bb;
+      color: #fff;
+    }
+
+    .phase-card .btn:hover {
+      background: #0678e3;
+      color: #fff;
+    }
+
+    .phase-card .btn.disabled {
+      border-color: #d8dde2;
+      background: #eef1f4;
+      color: #6c757d;
+      opacity: 1;
+    }
+
+    .back-link {
+      color: #0563bb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="case-study-hero">
+      <div class="container">
+        <a class="back-link" href="index.html#services">
+          <i class="bi bi-arrow-left"></i> Back to portfolio
+        </a>
+
+        <div class="mt-5">
+          <span class="case-study-label">Product case study</span>
+          <h1>SellerX LaunchpadX</h1>
+          <p class="lead">
+            An end-to-end platform that brings together the workflows required to take an e-commerce product from
+            initial idea to marketplace launch.
+          </p>
+
+          <div class="project-meta">
+            <div><strong>Role</strong>Product Manager</div>
+            <div><strong>Product</strong>Internal operations platform</div>
+            <div><strong>Focus</strong>Workflow automation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-content">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8">
+            <h2>Product evolution</h2>
+            <p>
+              LaunchpadX supports the complete product lifecycle: identifying new products to sell, sourcing them from
+              suppliers, creating product records in internal systems, producing assets such as product images,
+              researching marketplace keywords, and preparing product content for channels such as Amazon. The
+              lifecycle ends when the finished product is published and launched in the marketplace.
+            </p>
+            <p>
+              This case study presents three phases that demonstrate how different parts of that lifecycle were
+              designed and prototyped.
+            </p>
+            <p>
+              I built the Phase 1 prototype using Bootstrap. After validating the approach, I recommended that the
+              company adopt v0 so team members could create and share interactive prototypes more quickly, without
+              requiring extensive front-end development experience. Phases 2 and 3 were created using v0.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="phase-card">
+              <span class="phase-number">Phase 1</span>
+              <h3>Item creation workflow</h3>
+              <p>
+                The current prototype covering file upload, item review, approvals, SKU and UPC assignment, and
+                NetSuite synchronization.
+              </p>
+              <a class="btn" href="sellerx-launchpadx/index.html">View Phase 1 prototype</a>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="phase-card">
+              <span class="phase-number">Phase 2</span>
+              <h3>Marketplace content creation</h3>
+              <p>
+                A content creation module where teams enter product information, manage keywords, and prepare
+                marketplace-ready content for platforms such as Amazon.
+              </p>
+              <a class="btn" href="https://launchpadx-content.vercel.app/" target="_blank"
+                rel="noopener noreferrer">View Phase 2 prototype</a>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="phase-card">
+              <span class="phase-number">Phase 3</span>
+              <h3>ECDL and product compliance</h3>
+              <p>
+                A compliance module for managing product pre-classification, trade compliance, ECDL documents,
+                vendor documentation, and master data throughout the product lifecycle.
+              </p>
+              <a class="btn" href="https://launchpadx-ecdl.vercel.app/" target="_blank"
+                rel="noopener noreferrer">View Phase 3 prototype</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
