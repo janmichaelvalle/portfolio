@@ -56,11 +56,16 @@
     }
 
     .case-study-content {
+      width: 100%;
+      max-width: none;
+      margin: 0;
       padding: 64px 0;
     }
 
     .phase-card {
+      display: flex;
       height: 100%;
+      flex-direction: column;
       padding: 28px;
       border: 1px solid #e6e9ec;
       border-radius: 12px;
@@ -70,6 +75,7 @@
 
     .phase-number {
       display: inline-block;
+      align-self: flex-start;
       margin-bottom: 18px;
       padding: 6px 12px;
       border-radius: 999px;
@@ -86,7 +92,8 @@
     }
 
     .phase-card .btn {
-      margin-top: 12px;
+      align-self: flex-start;
+      margin-top: auto;
       padding: 10px 22px;
       border-radius: 50px;
       background: #0563bb;
