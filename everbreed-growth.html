@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Everbreed Growth Case Study | Jan Michael Valle</title>
+  <meta name="description"
+    content="A Product Manager case study about using product analytics, onboarding, and activation measurement to improve Everbreed's trial-to-paid journey.">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:500,600,700|Poppins:500,600,700"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .everbreed-growth .case-study-hero {
+      padding: 80px 0 48px;
+      background: #f8f9fa;
+      border-bottom: 0;
+    }
+
+    .everbreed-growth .case-study-kicker,
+    .everbreed-growth .case-study-eyebrow {
+      color: #0563bb;
+    }
+
+    .everbreed-growth .case-study-hero h1 {
+      margin: 12px 0 16px;
+      color: #45505b;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .everbreed-growth .case-study-lead {
+      max-width: 760px;
+    }
+
+    .everbreed-growth .case-study-meta {
+      gap: 12px 32px;
+      margin-top: 28px;
+    }
+
+    .everbreed-growth .case-study-meta div {
+      min-width: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .everbreed-growth .case-study-meta dt,
+    .everbreed-growth .case-study-heading>span {
+      color: #0563bb;
+    }
+
+    .everbreed-growth .case-study-heading>span {
+      background: #eaf4ff;
+    }
+
+    .baseline-grid,
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 760px;
+      margin-top: 36px;
+    }
+
+    .baseline-grid article,
+    .impact-grid article {
+      padding: 28px;
+      border: 1px solid #e1e7ec;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .baseline-grid strong,
+    .impact-grid strong {
+      display: block;
+      color: #0563bb;
+      font: 700 clamp(34px, 5vw, 52px) "Raleway", sans-serif;
+      line-height: 1.1;
+    }
+
+    .baseline-grid p,
+    .impact-grid p {
+      margin: 10px 0 0;
+      color: #536170;
+    }
+
+    .strategy-principle,
+    .impact-statement {
+      margin: 36px 0;
+      padding: 24px 28px;
+      border-left: 4px solid #0563bb;
+      background: #eaf4ff;
+      color: #26313d;
+      font: 700 clamp(22px, 3vw, 32px) "Raleway", sans-serif;
+    }
+
+    .journey-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 30px;
+      margin: 42px 0;
+      counter-reset: journey;
+    }
+
+    .journey-flow div {
+      position: relative;
+      padding: 22px 16px;
+      border: 1px solid #dfe7ed;
+      border-radius: 12px;
+      background: #fff;
+      color: #344050;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .journey-flow div:not(:last-child)::after {
+      position: absolute;
+      top: 50%;
+      right: -23px;
+      color: #0563bb;
+      font-family: "bootstrap-icons";
+      font-size: 18px;
+      content: "\f138";
+      transform: translateY(-50%);
+    }
+
+    .image-placeholder,
+    .chart-placeholder {
+      display: grid;
+      min-height: 280px;
+      margin-top: 24px;
+      padding: 28px;
+      place-items: center;
+      border: 1px dashed #aebbc6;
+      border-radius: 14px;
+      background: #f8fafb;
+      color: #667482;
+      text-align: center;
+    }
+
+    .image-placeholder i,
+    .chart-placeholder i {
+      display: block;
+      margin-bottom: 12px;
+      color: #0563bb;
+      font-size: 36px;
+    }
+
+    .activation-rule {
+      max-width: 860px;
+      margin: 36px 0 48px;
+      padding: 32px;
+      border: 1px solid #dce5ec;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(69, 80, 91, 0.08);
+    }
+
+    .activation-rule>strong {
+      display: block;
+      margin-bottom: 24px;
+      color: #26313d;
+      font-size: 20px;
+    }
+
+    .activation-behaviors {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .activation-behaviors div {
+      padding: 20px;
+      border-radius: 10px;
+      background: #eaf4ff;
+    }
+
+    .activation-behaviors i {
+      display: block;
+      margin-bottom: 10px;
+      color: #0563bb;
+      font-size: 24px;
+    }
+
+    .activation-behaviors strong,
+    .activation-behaviors span {
+      display: block;
+    }
+
+    .activation-behaviors span {
+      margin-top: 5px;
+      color: #536170;
+      font-size: 14px;
+    }
+
+    .segment-matrix {
+      display: grid;
+      grid-template-columns: 120px repeat(2, minmax(0, 1fr));
+      max-width: 860px;
+      margin-top: 30px;
+      border: 1px solid #dce5ec;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .segment-matrix>div {
+      min-width: 0;
+      padding: 22px;
+      border-right: 1px solid #dce5ec;
+      border-bottom: 1px solid #dce5ec;
+      background: #fff;
+    }
+
+    .segment-matrix>div:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .segment-matrix>div:nth-last-child(-n+3) {
+      border-bottom: 0;
+    }
+
+    .segment-matrix .matrix-axis {
+      display: grid;
+      place-items: center;
+      background: #eef5fb;
+      color: #45505b;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .segment-matrix .matrix-empty {
+      background: #f7f9fa;
+    }
+
+    .segment-matrix strong,
+    .segment-matrix span {
+      display: block;
+    }
+
+    .segment-matrix strong {
+      color: #0563bb;
+      font-size: 18px;
+    }
+
+    .segment-matrix span {
+      margin-top: 6px;
+      color: #536170;
+      font-size: 14px;
+    }
+
+    .sql-sample {
+      max-width: 860px;
+      margin-top: 30px;
+      padding: 24px;
+      overflow-x: auto;
+      border-radius: 12px;
+      background: #26313d;
+      color: #e8f0f5;
+      font-size: 13px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+
+    .impact-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: none;
+    }
+
+    .impact-grid strong {
+      font-size: clamp(27px, 4vw, 43px);
+    }
+
+    .chart-placeholder {
+      min-height: 340px;
+      margin-top: 42px;
+    }
+
+    @media (max-width: 991px) {
+      .journey-flow {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .journey-flow div:not(:last-child)::after {
+        top: auto;
+        right: 50%;
+        bottom: -27px;
+        transform: translateX(50%) rotate(90deg);
+      }
+
+      .activation-behaviors,
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .baseline-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .segment-matrix {
+        grid-template-columns: 78px repeat(2, minmax(0, 1fr));
+      }
+
+      .segment-matrix>div {
+        padding: 14px 10px;
+      }
+
+      .segment-matrix strong {
+        font-size: 15px;
+      }
+
+      .segment-matrix span {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+      }
+
+      .sql-sample {
+        padding: 18px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="case-study everbreed-growth">
+    <section class="case-study-hero">
+      <div class="container">
+        <a class="case-study-back" href="index.html#portfolio"><i class="bi bi-arrow-left"></i> Back to portfolio</a>
+        <div class="case-study-kicker">Product growth case study</div>
+        <h1>Everbreed &mdash; Turning Trial Signups Into Activated Customers</h1>
+        <p class="case-study-lead">Using product analytics, onboarding, and activation measurement to improve the path
+          from trial to paid.</p>
+        <dl class="case-study-meta">
+          <div>
+            <dt>Role</dt>
+            <dd>Product Manager</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Growth + Product Analytics</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>01</span>
+          <div>
+            <p class="case-study-eyebrow">The problem</p>
+            <h2>Signups Were Not Becoming Customers</h2>
+          </div>
+        </div>
+        <div class="case-study-copy case-study-copy-large">
+          <p>Everbreed was generating a high volume of trial signups, but only about 15% converted to paid
+            subscriptions. Paid advertising increased signup volume, but those additional signups were not translating
+            into meaningful product engagement or paying customers.</p>
+          <p>The team decided to shift the focus from maximizing signup volume to attracting higher-intent users and
+            helping them experience Everbreed's value during the trial.</p>
+        </div>
+        <div class="baseline-grid" aria-label="Baseline trial metrics">
+          <article><strong>~103</strong>
+            <p>Trial users per cohort</p>
+          </article>
+          <article><strong>~15%</strong>
+            <p>Trial-to-paid conversion</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section case-study-section-muted">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>02</span>
+          <div>
+            <p class="case-study-eyebrow">Acquisition strategy</p>
+            <h2>Shifting From Signups to Quality</h2>
+          </div>
+        </div>
+        <div class="case-study-copy">
+          <p>Paid acquisition was driving more registrations, but the additional signup volume was not producing
+            corresponding engagement or conversion. The company stopped paid advertising and shifted toward organic
+            acquisition, prioritizing higher-intent users over signup volume.</p>
+          <p>We also introduced a credit-card requirement before starting a trial. Previously, users could create an
+            Everbreed account without providing payment information.</p>
+        </div>
+        <div class="strategy-principle">More signups &ne; More engaged customers</div>
+        <p class="case-study-copy">The reduction in trial volume was an intentional shift away from optimizing for
+          signup volume alone.</p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>03</span>
+          <div>
+            <p class="case-study-eyebrow">Onboarding</p>
+            <h2>Designing for Activation</h2>
+          </div>
+        </div>
+        <div class="case-study-copy">
+          <p><strong>Before:</strong> New users logged into Everbreed and primarily encountered a hero banner before
+            entering the product.</p>
+          <p><strong>After:</strong> We introduced a guided onboarding flow designed to personalize the experience and
+            move users toward their first meaningful value moment.</p>
+        </div>
+        <div class="journey-flow" aria-label="Everbreed onboarding journey">
+          <div>Start Trial</div>
+          <div>Onboarding Questions</div>
+          <div>Set Up Rabbitry Profile</div>
+          <div>Add First Rabbit</div>
+          <div>Add More Rabbits or Explore Everbreed</div>
+        </div>
+        <p class="case-study-copy">The onboarding asked users about their breeding goals and what they were interested
+          in using Everbreed for. Users then personalized their rabbitry by adding a name and photo before being guided
+          toward adding their first rabbit. We treated adding the first rabbit as the initial value moment.</p>
+        <div class="row g-4 mt-3">
+          <div class="col-md-6">
+            <!-- Replace with previous onboarding or hero screenshot. -->
+            <div class="image-placeholder"><div><i class="bi bi-image"></i><strong>Previous onboarding / hero
+                  experience</strong><br>Screenshot placeholder</div></div>
+          </div>
+          <div class="col-md-6">
+            <!-- Replace with new onboarding flow screenshot. -->
+            <div class="image-placeholder"><div><i class="bi bi-image"></i><strong>New onboarding
+                  flow</strong><br>Screenshot placeholder</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section case-study-section-muted">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>04</span>
+          <div>
+            <p class="case-study-eyebrow">Feature discovery</p>
+            <h2>Extending Guidance Into the Product</h2>
+          </div>
+        </div>
+        <div class="case-study-copy">
+          <p>After seeing positive results from the onboarding experience, we expanded contextual education into other
+            areas of Everbreed.</p>
+          <p>When users visited certain parts of the product for the first time, they received short contextual prompts
+            or tours explaining the feature and helping them understand what to do next.</p>
+        </div>
+        <div class="strategy-principle">Learn from onboarding &rarr; extend successful pattern &rarr; continue helping
+          users discover value</div>
+        <!-- Replace with contextual product-tour screenshot. -->
+        <div class="image-placeholder"><div><i class="bi bi-window"></i><strong>Contextual product
+              tour</strong><br>Screenshot placeholder</div></div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>05</span>
+          <div>
+            <p class="case-study-eyebrow">Measurement framework</p>
+            <h2>Defining Activation</h2>
+          </div>
+        </div>
+        <p class="case-study-copy">Conversion told us whether someone became a paying customer, but it did not tell us
+          whether they were meaningfully using Everbreed. I created an activation framework using behavioral data from
+          core product workflows.</p>
+        <div class="activation-rule">
+          <strong>Activated = at least 3 actions across at least 2 of 3 core behaviors</strong>
+          <div class="activation-behaviors">
+            <div><i class="bi bi-card-list"></i><strong>Rabbit management</strong><span>3+ breeder/rabbit records</span>
+            </div>
+            <div><i class="bi bi-diagram-3"></i><strong>Pedigree activity</strong><span>3+ pedigree edits</span></div>
+            <div><i class="bi bi-calendar-check"></i><strong>Scheduling activity</strong><span>3+ schedule events</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Customer segmentation</h3>
+        <div class="segment-matrix" aria-label="Customer activation and payment segmentation matrix">
+          <div class="matrix-axis matrix-empty"></div>
+          <div class="matrix-axis">Activated</div>
+          <div class="matrix-axis">Not Activated</div>
+          <div class="matrix-axis">Paying</div>
+          <div><strong>Tier 1</strong><span>Paying &amp; Activated</span></div>
+          <div><strong>Tier 2</strong><span>Paying &amp; Not Activated</span></div>
+          <div class="matrix-axis">Not Paying</div>
+          <div><strong>Tier 3</strong><span>Not Paying &amp; Activated</span></div>
+          <div><strong>Tier 4</strong><span>Not Paying &amp; Not Activated</span></div>
+        </div>
+        <p class="case-study-copy mt-4">This segmentation helped distinguish customers who were simply paying from
+          customers who were both paying and actively receiving value from the product.</p>
+      </div>
+    </section>
+
+    <section class="case-study-section case-study-section-muted">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>06</span>
+          <div>
+            <p class="case-study-eyebrow">Supporting analysis</p>
+            <h2>Using SQL to Measure Behavior</h2>
+          </div>
+        </div>
+        <p class="case-study-copy">I queried Everbreed's underlying product and subscription data to classify users
+          based on product activity and payment status. This allowed us to measure activation at the cohort level rather
+          than relying only on surface-level metrics such as signups or logins.</p>
+        <pre class="sql-sample"><code>CASE
+  WHEN
+      (COALESCE(rb.total_breeders,0) &gt;= 3
+       AND COALESCE(p.total_pedigree_edits,0) &gt;= 3)
+   OR (COALESCE(rb.total_breeders,0) &gt;= 3
+       AND COALESCE(e.total_schedule_events,0) &gt;= 3)
+   OR (COALESCE(p.total_pedigree_edits,0) &gt;= 3
+       AND COALESCE(e.total_schedule_events,0) &gt;= 3)
+  THEN 'Activated'
+  ELSE 'Not Activated'
+END AS is_activated</code></pre>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container case-study-content">
+        <div class="case-study-heading"><span>07</span>
+          <div>
+            <p class="case-study-eyebrow">Impact</p>
+            <h2>Fewer Signups. More Paying Customers.</h2>
+          </div>
+        </div>
+        <div class="impact-grid" aria-label="Everbreed growth impact metrics">
+          <article><strong>~15% &rarr; ~58%</strong>
+            <p>Trial-to-paid conversion</p>
+          </article>
+          <article><strong>~103 &rarr; ~40</strong>
+            <p>Average trial users per cohort</p>
+          </article>
+          <article><strong>~15 &rarr; ~23</strong>
+            <p>Average paying customers per cohort</p>
+          </article>
+        </div>
+        <div class="impact-statement">Fewer signups. More paying customers.</div>
+        <p class="case-study-copy">Following the acquisition, trial-gating, and onboarding changes, trial-to-paid
+          conversion increased from approximately 15% to 58%. Although average trial volume decreased from ~103 to ~40
+          users per cohort, the average number of paying customers increased from ~15 to ~23.</p>
+        <p class="case-study-copy">Several changes happened together: paid acquisition was stopped in favor of organic
+          acquisition, a credit card became required to begin a trial, the onboarding experience was redesigned, and
+          contextual product education was later expanded.</p>
+        <!-- IMPACT CHART PLACEHOLDER: Replace with the future trial-to-paid cohort/trend chart. -->
+        <div class="chart-placeholder"><div><i class="bi bi-graph-up-arrow"></i><strong>Trial-to-paid cohort trend
+              chart</strong><br>Future data visualization placeholder</div></div>
+      </div>
+    </section>
+
+    <section class="case-study-next">
+      <div class="container case-study-content">
+        <a href="index.html#portfolio" class="case-study-button">View other case studies <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
