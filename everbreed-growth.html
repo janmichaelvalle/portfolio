@@ -151,6 +151,100 @@
       font-size: 36px;
     }
 
+    .activation-visuals {
+      margin-top: 42px;
+    }
+
+    .activation-visual-group + .activation-visual-group {
+      margin-top: 52px;
+    }
+
+    .activation-visual-heading {
+      margin-bottom: 16px;
+      color: #0563bb;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .activation-screenshot {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #dce3e7;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 14px 38px rgba(38, 49, 61, 0.1);
+    }
+
+    .activation-visual-caption {
+      max-width: 900px;
+      margin: 16px 0 0;
+      color: #536170;
+      line-height: 1.65;
+    }
+
+    .activation-after-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .activation-step {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .activation-step figcaption {
+      margin-bottom: 12px;
+      color: #344050;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .activation-step figcaption span {
+      display: block;
+      margin-bottom: 4px;
+      color: #0563bb;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .guidance-example-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 38px;
+    }
+
+    .guidance-example {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .guidance-example-label {
+      margin-bottom: 7px;
+      color: #0563bb;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .guidance-example h3 {
+      margin: 0 0 14px;
+      color: #344050;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .guidance-example figcaption {
+      margin-top: 15px;
+      color: #536170;
+      line-height: 1.65;
+    }
+
     .activation-rule {
       max-width: 860px;
       margin: 36px 0 48px;
@@ -364,6 +458,16 @@
       .impact-grid {
         grid-template-columns: 1fr;
       }
+
+      .activation-after-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .guidance-example-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
     }
 
     @media (max-width: 767px) {
@@ -494,24 +598,56 @@
         </div>
         <div class="journey-flow" aria-label="Everbreed onboarding journey">
           <div>Start Trial</div>
-          <div>Onboarding Questions</div>
-          <div>Set Up Rabbitry Profile</div>
+          <div>Understand Goals</div>
+          <div>Personalize Rabbitry</div>
           <div>Add First Rabbit</div>
-          <div>Add More Rabbits or Explore Everbreed</div>
+          <div>Continue Exploring</div>
         </div>
         <p class="case-study-copy">The onboarding asked users about their breeding goals and what they were interested
           in using Everbreed for. Users then personalized their rabbitry by adding a name and photo before being guided
           toward adding their first rabbit. We treated adding the first rabbit as the initial value moment.</p>
-        <div class="row g-4 mt-3">
-          <div class="col-md-6">
-            <!-- Replace with previous onboarding or hero screenshot. -->
-            <div class="image-placeholder"><div><i class="bi bi-image"></i><strong>Previous onboarding / hero
-                  experience</strong><br>Screenshot placeholder</div></div>
+
+        <div class="activation-visuals">
+          <div class="activation-visual-group">
+            <p class="activation-visual-heading">Before — Minimal Guidance</p>
+            <img src="assets/img/portfolio/everbreed-trial-to-paid/onboarding-before.png"
+              class="activation-screenshot"
+              alt="Legacy Everbreed dashboard showing a hero banner with an Add Rabbit call to action">
+            <p class="activation-visual-caption">New users landed directly on the dashboard with a single prompt to add
+              their first rabbit.</p>
           </div>
-          <div class="col-md-6">
-            <!-- Replace with new onboarding flow screenshot. -->
-            <div class="image-placeholder"><div><i class="bi bi-image"></i><strong>New onboarding
-                  flow</strong><br>Screenshot placeholder</div></div>
+
+          <div class="activation-visual-group">
+            <p class="activation-visual-heading">After — Guided Path to First Value</p>
+            <div class="activation-after-grid">
+              <figure class="activation-step">
+                <figcaption><span>01</span>Understand intent</figcaption>
+                <img src="assets/img/portfolio/everbreed-trial-to-paid/onboarding-goals.png"
+                  class="activation-screenshot"
+                  alt="Everbreed onboarding question asking why the user keeps rabbits">
+              </figure>
+              <figure class="activation-step">
+                <figcaption><span>02</span>Personalize the experience</figcaption>
+                <img src="assets/img/portfolio/everbreed-trial-to-paid/onboarding-personalize.png"
+                  class="activation-screenshot"
+                  alt="Everbreed onboarding screen for personalizing a rabbitry name, logo, and profile picture">
+              </figure>
+              <figure class="activation-step">
+                <figcaption><span>03</span>Reach first value</figcaption>
+                <img src="assets/img/portfolio/everbreed-trial-to-paid/onboarding-first-value.png"
+                  class="activation-screenshot"
+                  alt="Everbreed onboarding form for adding the user's first rabbit">
+              </figure>
+              <figure class="activation-step">
+                <figcaption><span>04</span>Guide the next action</figcaption>
+                <img src="assets/img/portfolio/everbreed-trial-to-paid/onboarding-success.png"
+                  class="activation-screenshot"
+                  alt="Everbreed onboarding confirmation with next steps after adding the first rabbit">
+              </figure>
+            </div>
+            <p class="activation-visual-caption">The new onboarding progressively learned about the user, personalized
+              their rabbitry, guided them toward their first meaningful product action, and provided clear next steps to
+              continue building value.</p>
           </div>
         </div>
       </div>
@@ -533,9 +669,26 @@
         </div>
         <div class="strategy-principle">Learn from onboarding &rarr; extend successful pattern &rarr; continue helping
           users discover value</div>
-        <!-- Replace with contextual product-tour screenshot. -->
-        <div class="image-placeholder"><div><i class="bi bi-window"></i><strong>Contextual product
-              tour</strong><br>Screenshot placeholder</div></div>
+        <div class="guidance-example-grid">
+          <figure class="guidance-example">
+            <p class="guidance-example-label">Contextual Feature Prompt</p>
+            <h3>Discovering features in context</h3>
+            <img src="assets/img/portfolio/everbreed-trial-to-paid/contextual-feature-prompt.png"
+              class="activation-screenshot"
+              alt="Everbreed contextual prompt introducing breed plans within the schedule">
+            <figcaption>Introduced guidance when users encountered features they may not have discovered on their own.
+            </figcaption>
+          </figure>
+          <figure class="guidance-example">
+            <p class="guidance-example-label">Guided Product Tour</p>
+            <h3>Explaining more complex workflows</h3>
+            <img src="assets/img/portfolio/everbreed-trial-to-paid/guided-product-tour.png"
+              class="activation-screenshot"
+              alt="Everbreed guided product tour explaining cage card workflows">
+            <figcaption>Used short, contextual tours to explain more complex workflows without requiring users to leave
+              the product.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
