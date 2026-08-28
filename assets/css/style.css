@@ -881,7 +881,8 @@ section {
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  border: 1px solid rgba(5, 99, 187, 0.14);
+  box-shadow: 0 8px 28px rgba(38, 49, 61, 0.06);
 }
 
 .services .icon-box .icon {
@@ -934,9 +935,11 @@ section {
   align-self: center;
 }
 
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .services .icon-box:hover {
+    border-color: rgba(5, 99, 187, 0.28);
+    box-shadow: 0 12px 34px rgba(38, 49, 61, 0.1);
+  }
 }
 
 .services .iconbox-blue i {
