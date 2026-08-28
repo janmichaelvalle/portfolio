@@ -269,7 +269,7 @@
     }
 
     .impact-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       max-width: none;
     }
 
@@ -277,9 +277,74 @@
       font-size: clamp(27px, 4vw, 43px);
     }
 
-    .chart-placeholder {
-      min-height: 340px;
+    .impact-grid .impact-primary {
+      border-color: #bfdcf5;
+      background: #f4f9fe;
+      box-shadow: 0 10px 28px rgba(5, 99, 187, 0.08);
+    }
+
+    .activation-chart {
       margin-top: 42px;
+      padding: 28px;
+      border: 1px solid #e1e7ec;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .activation-chart h3 {
+      margin: 0 0 6px;
+      color: #26313d;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .activation-chart>p {
+      margin: 0 0 24px;
+      color: #667482;
+      font-size: 14px;
+    }
+
+    .activation-chart svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .chart-grid-line {
+      stroke: #e8edf1;
+      stroke-width: 1;
+    }
+
+    .chart-axis-label,
+    .chart-transition-label {
+      fill: #6d7985;
+      font: 12px "Open Sans", sans-serif;
+    }
+
+    .chart-transition-label {
+      fill: #45505b;
+      font-weight: 600;
+    }
+
+    .chart-line {
+      fill: none;
+      stroke: #0563bb;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+    }
+
+    .chart-transition-line {
+      stroke: #7d8b97;
+      stroke-dasharray: 5 5;
+      stroke-width: 1.5;
+    }
+
+    .chart-transition-dot {
+      fill: #0563bb;
+      stroke: #fff;
+      stroke-width: 3;
     }
 
     @media (max-width: 991px) {
@@ -327,6 +392,19 @@
         padding: 18px;
         font-size: 11px;
       }
+
+      .activation-chart {
+        padding: 20px 12px 16px;
+      }
+
+      .activation-chart h3,
+      .activation-chart>p {
+        padding: 0 8px;
+      }
+
+      .chart-tick-optional {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -337,7 +415,7 @@
       <div class="container">
         <a class="case-study-back" href="index.html#portfolio"><i class="bi bi-arrow-left"></i> Back to portfolio</a>
         <div class="case-study-kicker">Product growth case study</div>
-        <h1>Everbreed &mdash; Turning Trial Signups Into Activated Customers</h1>
+        <h1>Everbreed &mdash; Turning Trials Into Paying Customers</h1>
         <p class="case-study-lead">Using product analytics, onboarding, and activation measurement to improve the path
           from trial to paid.</p>
         <dl class="case-study-meta">
@@ -530,30 +608,42 @@ END AS is_activated</code></pre>
         <div class="case-study-heading"><span>07</span>
           <div>
             <p class="case-study-eyebrow">Impact</p>
-            <h2>Fewer Signups. More Paying Customers.</h2>
+            <h2>Growth Outcomes</h2>
           </div>
         </div>
         <div class="impact-grid" aria-label="Everbreed growth impact metrics">
-          <article><strong>~15% &rarr; ~58%</strong>
+          <article class="impact-primary"><strong>~15% &rarr; ~59%</strong>
+            <p>Activation rate</p>
+          </article>
+          <article class="impact-primary"><strong>~15% &rarr; ~58%</strong>
             <p>Trial-to-paid conversion</p>
           </article>
           <article><strong>~103 &rarr; ~40</strong>
-            <p>Average trial users per cohort</p>
+            <p>Average trials per cohort</p>
           </article>
           <article><strong>~15 &rarr; ~23</strong>
             <p>Average paying customers per cohort</p>
           </article>
         </div>
         <div class="impact-statement">Fewer signups. More paying customers.</div>
-        <p class="case-study-copy">Following the acquisition, trial-gating, and onboarding changes, trial-to-paid
-          conversion increased from approximately 15% to 58%. Although average trial volume decreased from ~103 to ~40
-          users per cohort, the average number of paying customers increased from ~15 to ~23.</p>
-        <p class="case-study-copy">Several changes happened together: paid acquisition was stopped in favor of organic
-          acquisition, a credit card became required to begin a trial, the onboarding experience was redesigned, and
-          contextual product education was later expanded.</p>
-        <!-- IMPACT CHART PLACEHOLDER: Replace with the future trial-to-paid cohort/trend chart. -->
-        <div class="chart-placeholder"><div><i class="bi bi-graph-up-arrow"></i><strong>Trial-to-paid cohort trend
-              chart</strong><br>Future data visualization placeholder</div></div>
+        <p class="case-study-copy">Following the acquisition, trial-gating, and onboarding changes, activation
+          increased from approximately 15% to 59%, while trial-to-paid conversion increased from
+          approximately 15% to 58%.</p>
+        <p class="case-study-copy">Average trial volume decreased from ~103 to ~40 users per cohort, while the average
+          number of paying customers increased from ~15 to ~23.</p>
+        <p class="case-study-copy"><strong>Activation rate</strong> measures whether users demonstrated meaningful
+          product usage based on the activation definition established earlier. <strong>Trial-to-paid
+            conversion</strong> measures whether trial users ultimately became paying customers.</p>
+
+        <figure class="activation-chart" aria-labelledby="activation-chart-title activation-chart-description">
+          <figcaption>
+            <h3 id="activation-chart-title">Activation Rate by Cohort</h3>
+            <p id="activation-chart-description">Activation rate across 37 chronological cohorts. The marker separates
+              Cohorts 1&ndash;15 from Cohorts 16&ndash;37.</p>
+          </figcaption>
+          <svg id="activationTrendChart" viewBox="0 0 960 430" role="img"
+            aria-label="Line chart showing activation increasing after the trial and onboarding changes"></svg>
+        </figure>
       </div>
     </section>
 
@@ -566,6 +656,56 @@ END AS is_activated</code></pre>
   </main>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (() => {
+      const values = [
+        9, 11, 15, 13, 18, 15, 14, 19, 12, 14.78, 14.63, 17.53, 18.18, 13.77, 20.48,
+        42.00, 38.46, 55.26, 46.67, 45.24, 57.78, 50.00, 66.67, 64.29, 61.76, 58.49,
+        61.22, 57.45, 63.83, 57.50, 70.45, 62.50, 68.75, 69.05, 60.00, 72.41, 65.22
+      ];
+      const svg = document.getElementById('activationTrendChart');
+      const ns = 'http://www.w3.org/2000/svg';
+      const bounds = { left: 64, right: 28, top: 62, bottom: 54 };
+      const width = 960 - bounds.left - bounds.right;
+      const height = 430 - bounds.top - bounds.bottom;
+      const x = index => bounds.left + (index / (values.length - 1)) * width;
+      const y = value => bounds.top + height - (value / 80) * height;
+      const add = (name, attributes, text) => {
+        const element = document.createElementNS(ns, name);
+        Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+        if (text !== undefined) element.textContent = text;
+        svg.appendChild(element);
+        return element;
+      };
+
+      [0, 20, 40, 60, 80].forEach(value => {
+        add('line', { x1: bounds.left, y1: y(value), x2: 960 - bounds.right, y2: y(value), class: 'chart-grid-line' });
+        add('text', { x: bounds.left - 12, y: y(value) + 4, 'text-anchor': 'end', class: 'chart-axis-label' }, `${value}%`);
+      });
+
+      [1, 8, 15, 16, 22, 29, 37].forEach(cohort => {
+        const optional = [8, 22, 29].includes(cohort) ? ' chart-tick-optional' : '';
+        add('text', {
+          x: x(cohort - 1), y: 430 - 20, 'text-anchor': 'middle', class: `chart-axis-label${optional}`
+        }, `${cohort}`);
+      });
+
+      add('text', { x: bounds.left, y: 430 - 2, class: 'chart-axis-label' }, 'Cohort');
+
+      const transitionX = (x(14) + x(15)) / 2;
+      add('line', {
+        x1: transitionX, y1: bounds.top - 8, x2: transitionX, y2: bounds.top + height,
+        class: 'chart-transition-line'
+      });
+      add('text', {
+        x: transitionX + 9, y: bounds.top - 25, class: 'chart-transition-label'
+      }, 'Trial & onboarding changes');
+
+      const points = values.map((value, index) => `${x(index)},${y(value)}`).join(' ');
+      add('polyline', { points, class: 'chart-line' });
+      add('circle', { cx: x(15), cy: y(values[15]), r: 6, class: 'chart-transition-dot' });
+    })();
+  </script>
 </body>
 
 </html>
