@@ -66,16 +66,14 @@
       font: 700 clamp(20px, 2.6vw, 28px) "Raleway", sans-serif;
     }
 
-    .retention-journey,
-    .measurement-funnel {
+    .retention-journey {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 28px;
       margin: 40px 0 30px;
     }
 
-    .retention-journey div,
-    .measurement-funnel div {
+    .retention-journey div {
       position: relative;
       display: grid;
       min-height: 86px;
@@ -89,8 +87,7 @@
       text-align: center;
     }
 
-    .retention-journey div:not(:last-child)::after,
-    .measurement-funnel div:not(:last-child)::after {
+    .retention-journey div:not(:last-child)::after {
       position: absolute;
       top: 50%;
       right: -22px;
@@ -214,48 +211,23 @@
       box-shadow: 0 14px 38px rgba(38, 49, 61, 0.1);
     }
 
-    .retention-screenshot-compact {
-      max-width: 760px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    .control-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      max-width: 960px;
-      margin-top: 32px;
-    }
-
-    .control-grid article {
-      padding: 26px;
-      border: 1px solid #dfe7ed;
-      border-radius: 14px;
-      background: #fff;
-    }
-
-    .control-grid h3 {
-      margin: 0 0 16px;
-      color: #26313d;
-      font-size: 19px;
-    }
-
-    .control-grid ul,
-    .learning-list {
-      margin: 0;
+    .control-summary {
+      max-width: 820px;
+      margin: 26px 0 0;
       padding-left: 20px;
       color: #536170;
     }
 
-    .control-grid li,
-    .learning-list li {
+    .control-summary li {
       margin-bottom: 9px;
       line-height: 1.55;
     }
 
-    .measurement-funnel {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .retention-screenshot-caption {
+      margin: 28px 0 -18px;
+      color: #45505b;
+      font-size: 14px;
+      font-weight: 700;
     }
 
     .outcome-layout {
@@ -286,31 +258,74 @@
       font-weight: 700;
     }
 
-    .primary-outcome small {
-      margin-top: 24px;
-      opacity: 0.82;
-    }
-
-    .save-breakdown {
+    .outcome-evidence {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .save-breakdown article {
-      padding: 24px;
+      align-content: center;
+      padding: 28px;
       border: 1px solid #dfe7ed;
-      border-radius: 14px;
+      border-radius: 16px;
       background: #fff;
     }
 
-    .save-breakdown strong {
-      display: block;
-      color: #0563bb;
-      font: 700 34px "Raleway", sans-serif;
+    .outcome-ratio {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
     }
 
-    .save-breakdown span {
+    .outcome-ratio strong {
+      display: block;
+      color: #0563bb;
+      font: 700 clamp(36px, 5vw, 52px) "Raleway", sans-serif;
+      line-height: 1;
+    }
+
+    .outcome-ratio div {
+      min-width: 0;
+    }
+
+    .outcome-ratio span,
+    .outcome-evidence small {
+      color: #667482;
+    }
+
+    .outcome-ratio-label {
+      display: block;
+      margin-top: 8px;
+      color: #536170;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .outcome-evidence small {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .retention-breakdown {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .retention-breakdown article {
+      padding: 20px;
+      border: 1px solid #dfe7ed;
+      border-radius: 12px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .retention-breakdown strong {
+      display: block;
+      color: #0563bb;
+      font: 700 30px "Raleway", sans-serif;
+    }
+
+    .retention-breakdown span {
       color: #536170;
     }
 
@@ -319,20 +334,13 @@
       margin-top: 24px;
     }
 
-    .learning-list {
-      max-width: 860px;
-      margin-top: 28px;
-    }
-
     @media (max-width: 991px) {
-      .retention-journey,
-      .measurement-funnel {
+      .retention-journey {
         grid-template-columns: 1fr;
         gap: 32px;
       }
 
-      .retention-journey div:not(:last-child)::after,
-      .measurement-funnel div:not(:last-child)::after {
+      .retention-journey div:not(:last-child)::after {
         top: auto;
         right: 50%;
         bottom: -26px;
@@ -341,7 +349,6 @@
 
       .reason-list,
       .insight-purpose,
-      .control-grid,
       .outcome-layout {
         grid-template-columns: 1fr;
       }
@@ -356,8 +363,8 @@
         padding-top: 14px;
       }
 
-      .save-breakdown {
-        grid-template-columns: 1fr 1fr;
+      .outcome-ratio {
+        gap: 10px;
       }
 
       .screenshot-placeholder {
@@ -431,7 +438,7 @@
           <div><strong>02 — Respond</strong>Determine which retention experience should appear next.</div>
         </div>
         <img src="assets/img/portfolio/everbreed-retention/cancellation-reason-selection.png"
-          class="retention-screenshot retention-screenshot-compact"
+          class="retention-screenshot"
           alt="Everbreed cancellation flow asking the customer to select why they are cancelling">
       </div>
     </section>
@@ -473,78 +480,50 @@
             <p class="case-study-eyebrow">Customer control</p>
             <h2>Retain When We Can. Let Customers Leave When They Want.</h2>
           </div></div>
-        <p class="case-study-copy">Retention was not implemented by making cancellation difficult. The experience
-          balanced relevant alternatives with transparent customer choice.</p>
-        <div class="control-grid">
-          <article><h3>Clear before the decision</h3><ul>
-              <li>Subscription remains active through the current billing period.</li>
-              <li>Premium access ends when the subscription expires.</li>
-              <li>Rabbit records, pedigrees, and data are retained for 6 months.</li>
-              <li>Users can resubscribe during the retention period.</li>
-            </ul></article>
-          <article><h3>Choice at cancellation</h3><ul>
-              <li>Keep Subscription</li><li>Contact Support</li><li>Cancel Subscription</li>
-              <li>If cancelled, show the end date and option to resume before access expires.</li>
-              <li>Send a confirmation email.</li>
-            </ul></article>
-        </div>
+        <p class="case-study-copy">Even after a customer continued toward cancellation, we created one final opportunity
+          to stay—such as pausing or accepting a discount—while keeping the consequences of cancellation clear and
+          allowing them to leave if they still chose to.</p>
+        <ul class="control-summary">
+          <li>The subscription remains active through the current billing period, with premium access ending at
+            expiration.</li>
+          <li>Rabbit records, pedigrees, and data are retained for 6 months.</li>
+          <li>Users can resubscribe during the retention period or continue with cancellation.</li>
+        </ul>
+        <p class="retention-screenshot-caption">One final retention opportunity before cancellation</p>
         <img src="assets/img/portfolio/everbreed-retention/cancellation-confirmation.png"
           class="retention-screenshot"
-          alt="Everbreed cancellation flow showing confirmation details, retention choices, and cancellation completion">
+          alt="Everbreed cancellation journey showing confirmation details, retention choices, and cancellation completion">
       </div>
     </section>
 
     <section class="case-study-section case-study-section-muted">
       <div class="container case-study-content">
         <div class="case-study-heading"><span>06</span><div>
-            <p class="case-study-eyebrow">Measurement</p>
-            <h2>Measuring Whether the Flow Actually Saved Customers</h2>
-          </div></div>
-        <p class="case-study-copy">We tracked behavior through the cancellation journey rather than only measuring
-          completed cancellations.</p>
-        <div class="measurement-funnel" aria-label="Cancellation measurement funnel">
-          <div>Entered Cancellation</div><div>Reason Selected</div><div>Retention Intervention</div>
-          <div>Saved or Cancelled</div>
-        </div>
-        <p class="case-study-copy">The key measurements were cancellation flow entered, cancellation reason selected,
-          retention option selected or accepted, cancellation completed, and customer retained.</p>
-      </div>
-    </section>
-
-    <section class="case-study-section">
-      <div class="container case-study-content">
-        <div class="case-study-heading"><span>07</span><div>
             <p class="case-study-eyebrow">Outcome</p>
-            <h2>Nearly 1 in 5 Cancellation Attempts Were Saved</h2>
+            <h2>18.3% of Cancellation Attempts Were Saved</h2>
           </div></div>
+        <p class="case-study-copy">We tracked whether customers entering the cancellation flow ultimately cancelled or
+          accepted a retention alternative.</p>
         <div class="outcome-layout">
-          <div class="primary-outcome"><strong>18.3%</strong><span>Cancellation Save Rate</span>
-            <small>179 / 979 = 18.3%</small></div>
-          <div class="save-breakdown">
-            <article><strong>120</strong><span>Pause</span></article>
-            <article><strong>50</strong><span>Discount</span></article>
-            <article><strong>9</strong><span>Downgrade</span></article>
-            <article><strong>179</strong><span>Total Saves</span></article>
+          <div class="primary-outcome"><strong>18.3%</strong><span>Cancellation Save Rate</span></div>
+          <div class="outcome-evidence">
+            <div class="outcome-ratio">
+              <div><strong>179</strong><span class="outcome-ratio-label">Total Saves</span></div>
+              <span>out of</span>
+              <div><strong>979</strong><span class="outcome-ratio-label">Cancellation Flow Entries</span></div>
+            </div>
+            <small>179 / 979 = 18.3%</small>
           </div>
         </div>
         <p class="case-study-copy outcome-support">18.3% of cancellation attempts were retained through an alternative
-          offered within the cancellation flow. The flow received 979 entries.</p>
+          offered within the cancellation flow.</p>
+        <div class="retention-breakdown" aria-label="Saved cancellation breakdown">
+          <article><strong>120</strong><span>Pause</span></article>
+          <article><strong>50</strong><span>Discount</span></article>
+          <article><strong>9</strong><span>Downgrade</span></article>
+        </div>
         <div class="retention-callout">Pause emerged as the strongest retention mechanism, suggesting that many
           customers considering cancellation did not necessarily want to leave Everbreed permanently.</div>
-      </div>
-    </section>
-
-    <section class="case-study-section case-study-section-muted">
-      <div class="container case-study-content">
-        <div class="case-study-heading"><span>08</span><div>
-            <p class="case-study-eyebrow">Product learning</p>
-            <h2>What We Learned From Cancellation Behavior</h2>
-          </div></div>
-        <ul class="learning-list">
-          <li>Cancellation intent does not always mean the customer wants to leave permanently.</li>
-          <li>Pause was selected substantially more often than discount or downgrade.</li>
-          <li>Cancellation reasons can become a structured source of product, pricing, support, and competitive insight.</li>
-        </ul>
       </div>
     </section>
 
