@@ -325,12 +325,45 @@ h6 {
   letter-spacing: 0.03em;
 }
 
+#hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+#hero .hero-actions .btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+#hero .hero-actions .btn-outline-primary {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.homepage-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-content #portfolio {
+  order: 1;
+}
+
+.homepage-content #resume {
+  order: 2;
+}
+
+.homepage-content #contact {
+  order: 3;
+}
+
 /* #hero p span {
   color: #0563bb;
   letter-spacing: 1px;
 } */
 
-å
 #hero button {
   background: #0563bb;
   border: 0;
@@ -385,6 +418,21 @@ h6 {
     margin: 8px auto 0;
     font-size: 14px;
     line-height: 22px;
+  }
+
+  #hero .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hero .hero-actions .btn {
+    width: min(240px, 100%);
   }
 }
 
