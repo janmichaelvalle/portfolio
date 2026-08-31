@@ -342,6 +342,33 @@ h6 {
   background: rgba(255, 255, 255, 0.7);
 }
 
+@media (min-width: 1200px) {
+  #hero h1 {
+    font-size: 72px;
+    line-height: 63px;
+  }
+
+  #hero p {
+    margin-top: 17px;
+    font-size: 29px;
+  }
+
+  #hero .hero-focus {
+    margin-top: 9px;
+    font-size: 18px;
+  }
+
+  #hero .hero-actions {
+    gap: 13px;
+    margin-top: 27px;
+  }
+
+  #hero .hero-actions .btn {
+    padding: 11px 27px;
+    font-size: 17px;
+  }
+}
+
 .homepage-content {
   display: flex;
   flex-direction: column;
